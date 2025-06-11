@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+    <style>
+        *{
+            list-style: none;
+            background-color: rgb(2, 2, 25);
+            color: aliceblue;
+            text-decoration: none;
+            text-transform: capitalize;
+            background-color: rgb(4, 4, 20);
+            box-sizing: border-box;
+        }
+         nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+
+        }
+      
+        input{
+          border:2px solid whitesmoke ;
+          border-radius: 5px;
+          height: 25px;
+          color: whitesmoke;
+          font-weight: 700;
+        }
+        form button{
+          border:2px solid whitesmoke ;
+          border-radius: 5px;
+          height: 25px;
+          color: whitesmoke;
+          font-weight: 700;
+          cursor: pointer;
+
+        }
+        form button:hover{
+          background-color: silver;
+          color: darkblue;
+          transition: 0.5s;
+        }
+        .head a{
+          font-size: 3rem;
+          color:#a7780a;
+          
+        }
+          .log{
+            display: flex;
+            align-items: center;
+            margin-left: 50px;
+        }
+        .log a{
+            border-radius: 5px;
+          color: whitesmoke;
+          font-weight: 700;
+           border:2px solid whitesmoke ;
+          cursor: pointer;
+          background-color: transparent;
+          font-size: 20px;
+
+        }
+        .log a:hover{
+            background-color: silver;
+          color: darkblue;
+          transition: 0.5s;
+        }
+
+        
+        .lines{
+          display: none;
+        }
+        .signn{
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+        }
+        .acart a{
+          border-radius: 5px;
+          color: whitesmoke;
+          font-weight: 700;
+           border:2px solid whitesmoke ;
+          cursor: pointer;
+          background-color: transparent;
+          font-size: 20px;
+
+        }
+        .acart a:hover{
+           background-color: silver;
+          color: darkblue;
+          transition: 0.5s;
+
+        }
+
+        .aname{
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+        }
+        .name1{
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin-left: 50px;
+          background-color: transparent;
+
+        }
+        .name1 h1{
+          background-color: transparent;
+        }
+        .name1 span{
+          color: #a7780a;
+          font-size: 20px;
+          font-weight: 800;
+          background-color: transparent;
+
+        }
+        .name2 a{
+              border-radius: 5px;
+          color: whitesmoke;
+          font-weight: 700;
+           border:2px solid whitesmoke ;
+          cursor: pointer;
+          background-color: transparent;
+          font-size: 20px;
+          margin-left: 20px;
+
+        }
+          .name2 a:hover{
+           background-color: silver;
+          color: darkblue;
+          transition: 0.5s;
+
+        }
+        
+        @media (min-width:320px) and (max-width:850px) {
+          .signn{
+          border-radius: 5px;
+          width: 40%;
+          height: 40px;
+          color: whitesmoke;
+          font-weight: 700;
+          cursor: pointer;
+          position: absolute;
+          background-color: transparent;
+          display: none;
+          margin-top: 20%;
+          right: 0px;
+          text-align: center;
+          }
+          .signn.show{
+            right: 0px;
+          display: grid;
+          grid-template-columns: 1fr;
+          }
+          .log {
+            display:grid;
+            align-items: center;
+            grid-template-columns: 1fr ;
+            background-color: transparent;
+            position: absolute;
+            right: 30px;
+            align-items: center;
+            top: 30px;
+
+        }
+       
+        .log a{
+            width: 100px;
+            text-align: center;
+            height: 35px;
+            text-align: center;
+            padding-top: 5px;
+            margin-top: 30px;
+
+
+        }
+        .log h1{
+          background-color: transparent;
+          display: none;
+        }
+
+
+        .aname{
+          position: absolute;
+          top: 30px;
+          color:whitesmoke;
+          border-radius: 5px;
+          background-color: transparent;
+          display: grid;
+          grid-template-columns: 1fr;
+          right: 20px;
+        }
+
+        .anam:hover{
+           background-color: silver;
+          color: darkblue;
+          transition: 0.5s;
+
+        }
+         .name1{
+          background-color: transparent;
+          position: absolute;
+          top: 10px;
+          right: 1px;
+        }
+        .name2{
+          background-color: transparent;
+          top: 80px;
+          position: absolute;
+          right: 20px;
+          
+        }
+        .acart a{
+          width: 130px;
+          position: absolute;
+          top: 10%;
+          border-radius: 5px;
+          color: whitesmoke;
+          font-weight: 700;
+          border:2px solid whitesmoke ;
+          cursor: pointer;
+          background-color: transparent;
+          font-size: 20px;
+          right: 20px;
+          text-align: center;
+
+        }
+        .acart:hover{
+           background-color: silver;
+          color: darkblue;
+          transition: 0.5s;
+        }
+       
+
+          
+          .lines{
+          display: flex;
+          cursor: pointer;
+           border: 2px solid whitesmoke;
+          border-radius: 5px;
+          color: whitesmoke;
+          }
+             .product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+    background: rgb(6, 6, 28);
+    display:grid;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+    position: relative;
+    left: 10%;
+    vertical-align: top;
+}
+
+   
+
+
+        
+
+          
+        }
+          .product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+    background: rgb(6, 6, 28);
+    display:inline-table;
+    margin: 1rem;
+    margin-left: 10%;
+    vertical-align: top;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit:fill;
+}
+.product-card a{
+    text-decoration: none;
+}
+
+.product-card .card-body {
+    padding: 10px;
+
+}
+
+.product-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.product-card p {
+    font-size: 0.95rem;
+    color: #a7780a;
+    margin-bottom: 0.5rem;
+
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #6a92ba;
+    font-size: 1.1rem;
+
+}
+.cart-add-button a{
+  color: whitesmoke;
+  background-color: orangered;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 800;
+  margin-left: 65%;
+}
+.signn span{
+    font-size: 20px;
+    color:#ce9f29;
+    text-shadow: 5px 5px 10px rgb(214, 156, 20);
+}
+
+    </style>
+</head>
+<body>
+<!--nav bar-->
+<nav>
+      <div class="head">
+        <a href="/">    
+              saharaa
+        </a>
+      </div>
+      <form action="{%  url 'search_item' %}" method="post">{% csrf_token %} 
+        <input type="text" name="item_search" placeholder="search product" autocomplete="off">
+        <button type="submit">search</button>
+      </form> 
+
+      <button class="lines" onclick="togglefun()"><i class="fa-solid fa-bars"></i></button>
+      
+      <div class="signn" id="res">
+        {% if user.is_authenticated %}
+     <div class="acart"><a href="/cart/"> cart ({{len_cart}} items)</a></div>
+      {% else %}
+      <div class="acart"><a href="/login_page/" onclick="hi()">cart</a></div>
+      {% endif %} <br>
+      
+      {% if user.is_authenticated %}
+      <div class="aname">
+              <div class="name1">
+                <h1>hi</h1>&nbsp;<span>{{user}}</span>
+              </div> 
+              <div class="name2">
+                <a href="/logout_page/">logout</a>
+              </div>
+      </div>
+      {% else %}
+      <div class="log">
+       <a href="/signup/">sign up</a> &nbsp;&nbsp;&nbsp;&nbsp;<h1>/</h1>&nbsp;&nbsp;&nbsp;<a href="/login_page/">login</a>
+      </div>
+      {% endif %}
+      </div>
+    </nav>
+<!--nav end-->
+
+ {% for i in products %}
+<div class="product-card">
+  <a href="/product_detail/{{i.id}}">
+    <img src=" {{ i.pic.url }}" alt="{{ product.name }}"></a>
+    <div class="card-body">
+      <a href="/product_detail/{{i.id}}"><h3> {{i.title}}</h3></a>
+      <a href="/product_detail/{{i.id}}"><p>{{i.content}}</p></a>
+      <a href="/product_detail/{{i.id}}"><div class="price">₹ {{i.cost}}</div></a>
+         {% if user.is_authenticated %}
+             <p class="cart-add-button">
+        <a href="/add/{{i.id}}" onclick="hai()">add cart</a></p>
+        {% else %}
+        <p class="cart-add-button">
+        <a href="/login_page/" onclick="hi()">add cart</a></p>
+        {% endif %}
+    </div>
+</div>
+      {% endfor %}
+         <script>
+        function hai(){
+            alert("item added to cart ")
+        }
+         function hi(){
+            alert("create account then only accesses the cart option  ")
+        }
+        function togglefun(){
+          let nav=document.getElementById("res");
+          nav.classList.toggle("show");
+
+        }
+
+     </script>
+</body>
+</html>
