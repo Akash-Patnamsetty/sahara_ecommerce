@@ -486,13 +486,14 @@ span{
     </nav>
 <!--nav bar ends-->
 
+
     
 
 <!--main card-->
 <h1>cart items</h1>
  {% for i in products %}
 <div class="product-card">
-  <a href="/product_detail/{{i.id}}">
+<a href="">
     <img src=" {{ i.pic}}" alt="{{ product.name }}"></a>
     <div class="card-body"><br>
      <h3><span>product-name:</span> {{i.title}}</h3>
