@@ -140,6 +140,20 @@
         }
         
         @media (min-width:320px) and (max-width:845px) {
+          nav{
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .head{
+           font-size: 1rem;
+          color:#a7780a;
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
+        .navhead{
+           display: flex;
+           margin-bottom: 10px;
+        }
           .signn{
           border-radius: 5px;
           width: 40%;
@@ -150,7 +164,7 @@
           position: absolute;
           background-color: transparent;
           display: none;
-          margin-top: 20%;
+          margin-top: 150px;
           right: 0px;
           text-align: center;
           }
@@ -246,6 +260,8 @@
           color: whitesmoke;
           display: flex;
           cursor: pointer;
+           margin-left: 20px;
+          align-items: center;
           }
              .product-card {
     border: 1px solid #ddd;
@@ -259,7 +275,6 @@
     grid-template-columns: 1fr;
     margin: 1rem;
     position: relative;
-    left: 10%;
     vertical-align: top;
 }
 
@@ -386,12 +401,14 @@ span{
               saharaa
         </a>
       </div>
+      <div class="navhead">
+      
       <form action="{%  url 'search_item' %}" method="post">{% csrf_token %} 
         <input type="text" name="item_search" placeholder="search product" autocomplete="off">
         <button type="submit">search</button>
       </form>
       <button class="lines" onclick="togglefun()"><i class="fa-solid fa-bars"></i></button>
-     
+      </div>
       
       <div class="signn" id="res">
         {% if user.is_authenticated %}

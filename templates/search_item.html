@@ -139,6 +139,20 @@
         }
         
         @media (min-width:320px) and (max-width:850px) {
+          nav{
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .head{
+           font-size: 1rem;
+          color:#a7780a;
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
+        .navhead{
+           display: flex;
+           margin-bottom: 10px;
+        }
           .signn{
           border-radius: 5px;
           width: 40%;
@@ -149,9 +163,10 @@
           position: absolute;
           background-color: transparent;
           display: none;
-          margin-top: 20%;
+          margin-top: 170px;
           right: 0px;
           text-align: center;
+          z-index: 400;
           }
           .signn.show{
             right: 0px;
@@ -245,6 +260,8 @@
            border: 2px solid whitesmoke;
           border-radius: 5px;
           color: whitesmoke;
+           margin-left: 20px;
+          align-items: center;
           }
              .product-card {
     border: 1px solid #ddd;
@@ -258,7 +275,6 @@
     grid-template-columns: 1fr;
     margin: 1rem;
     position: relative;
-    left: 10%;
     vertical-align: top;
 }
 
@@ -343,13 +359,15 @@
               saharaa
         </a>
       </div>
+      <div class="navhead">
+
       <form action="{%  url 'search_item' %}" method="post">{% csrf_token %} 
         <input type="text" name="item_search" placeholder="search product" autocomplete="off">
         <button type="submit">search</button>
       </form> 
 
       <button class="lines" onclick="togglefun()"><i class="fa-solid fa-bars"></i></button>
-      
+      </div>
       <div class="signn" id="res">
         {% if user.is_authenticated %}
      <div class="acart"><a href="/cart/"> cart ({{len_cart}} items)</a></div>
