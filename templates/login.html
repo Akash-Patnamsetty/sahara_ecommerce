@@ -43,7 +43,9 @@ form{
     color: wheat;
     padding-top: 10px;
     text-align: center;
-
+    border: 2px solid gold;
+    border-radius: 15px;
+    height: 450px;
 
 
 
@@ -77,11 +79,11 @@ button:hover{
 }
 a{
     color: whitesmoke;
-    margin-bottom: 10px;
     text-decoration: none;
     position: relative;
     top: 5%;
     font-weight: 800;
+
 }
 a:hover{
     color: green;
@@ -114,7 +116,7 @@ li{
 </head>
 <body>
     <!--navigation-->
-     <div class="maintext">sahara</div>
+     <div class="maintext"> <a href="/">saharaa</a></div>
  
 
 <form action="" method="post"> {% csrf_token %}
@@ -131,10 +133,10 @@ li{
         {% endfor %}
     </ul>
     {% endif %}<br><br>
-    your name: <input type="text" name="user"> <br><br>
+    your name: <input type="text" name="user"> <br><br> <br>
     your password: <input type="password" name="password"><br><br>
-    <button type="submit">login</button><br><br>
-    or <br> <br><br><a href="/signup/">signup</a>
+    <button type="submit">login</button><br> <br>
+    or <br><a href="/signup/">signup</a>
  
 </form>
 

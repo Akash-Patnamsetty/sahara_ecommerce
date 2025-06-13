@@ -98,7 +98,7 @@ def search_item(request):
             v=task.count
             items=Products.objects.filter( Q(title__icontains=item_search) or Q(content__icontains=item_search) )
             return render(request,"search_item.html",{"products":items,"len_cart":v})   
-        else: 
+        else:
             items=Products.objects.filter(Q(title__icontains=item_search) or Q(content__icontains=item_search))
             return render(request,"search_item.html",{"products":items}) 
     return render(request,"home.html")  

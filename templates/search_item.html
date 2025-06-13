@@ -137,6 +137,12 @@
           transition: 0.5s;
 
         }
+        h1{
+          text-align: center;
+          margin-top: 10%;
+          font-size: 30px;
+          color: #a7780a;
+        }
         
         @media (min-width:320px) and (max-width:850px) {
           nav{
@@ -277,6 +283,11 @@
     position: relative;
     vertical-align: top;
 }
+h1{
+   text-align: center;
+          margin-top: 30%;
+          font-size: 20px;
+}
 
    
 
@@ -393,6 +404,7 @@
     </nav>
 <!--nav end-->
 
+{% if products %}
  {% for i in products %}
 <div class="product-card">
   <a href="/product_detail/{{i.id}}">
@@ -411,7 +423,12 @@
     </div>
 </div>
       {% endfor %}
-         <script>
+    {% else %}
+              <h1> " sorry , we couldn't find any results for your search "</h1>
+    {% endif %}
+
+
+     <script>
         function hai(){
             alert("item added to cart ")
         }
